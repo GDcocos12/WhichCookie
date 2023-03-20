@@ -1,0 +1,54 @@
+/*
+--------------------ИМПОРТ ШРИФТОВ СВОИХ (дааа, с инета, страшна ебать?)--------------------
+*/
+@font-face {
+    font-family: 'Modenine';
+    src: local('Modenine'),
+        url('../font/Modenine.ttf#font') format('truetype');
+}
+
+@font-face {
+    font-family: 'BasicManual';
+    src: local('BasicManual'),
+        url('../font/SvBasicManual.ttf#font') format('truetype');
+}
+/*
+--------------------ИМПОРТ ОКОНЧЕН, ДО СВИДАНИЯ, КВА!--------------------
+*/
+
+h1 {
+	font-family: BasicManual;
+	color: rgba(255, 255, 255, 1);
+}
+
+h3 {
+	font-family: BasicManual;
+	color: rgba(201, 201, 201, 1);
+}
+
+h4 {
+	font-family: BasicManual;
+	color: rgba(179, 179, 179, 1);
+}
+
+.findoutbutt {
+	background-color: rgba(196, 196, 196, 0.5);
+	height: 50px;
+    width: 200px;
+}
+
+body {
+	background: rgb(0,26,255);
+	background: linear-gradient(0deg, rgba(0,26,255,1) 0%, rgba(0,215,255,1) 88%);
+}
+
+@keyframes floater {
+ 	0%{transform: translateY(-10%);transition: ease 0.5s;}
+ 	50%{transform: translateY(10%);transition: ease 0.5s;}
+}
+
+.cookie {
+	transform: translateY(-10%);
+ 	animation: floater 1.0s infinite;
+  	transition: ease 0.5s;
+}

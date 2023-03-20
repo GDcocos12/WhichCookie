@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Печеньки</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body style="width: 100vw; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center">
+	<p align="center">
+		<h1>WHICH COOKIE ARE YOU?</h1>
+		<h3>WE HAVE AN ANSWER!</h3>
+		<h4>FIND OUT BY PRESSING THIS BUTTON!</h4>
+
+		<div id="cookie_here">
+		</div>
+
+		<input id="findoutbutt" type="button" value="Find Out" onclick="ReturnCookie();" style="background-color: rgba(196, 196, 196, 0.5); border: 0px; border-radius: 10px; width: 250px; height: 50px; font-family: BasicManual; font-size: 20px;">
+	</p>
+
+	<script type="text/javascript">
+		function getRandomInt(max) {
+		  return Math.floor(Math.random() * max);
+		}
+		function l(what) {return document.getElementById(what);}
+		function ReturnCookie() {
+			let stri = "";
+			let message = "";
+			let img = "";
+			let choice = getRandomInt(6);
+			if (choice == 0) {
+				img = 'biscookie.png';
+				message = 'Biscuit Cookie - you are a sad and pessimistic<br>person, like to be alone and do not believe<br>in yourself';
+			} else if (choice == 1) {
+				img = 'chocolatechip.png';
+				message = 'Chocolate Chip Cookie - everything is ok with your<br> self-esteem, you are a cool dude';
+			} else if (choice == 2) {
+				img = 'chocolatecookie.png';
+				message = 'Chocolate Cookie - you are a cool dude, you do a lot<br>of things, study well<br> and communicate - you are "chocolate"';
+			} else if (choice == 3) {
+				img = 'crackers.png';
+				message = 'Cracker - you are a salty slut who likes<br>to offend everyone, you have high<br>self-esteem and you are confident<br>in yourself';
+			} else if (choice == 4) {
+				img = "raisincookie.png";
+				message = 'Raisin Cookie - you are embarrassed to be yourself and<br>therefore try not to stand out, just<br>like cookies with raisins against<br>the background of others';
+			} else if (choice == 5) {
+				img = 'gingerman.png';
+				message = 'Gingerbread Man - you are the sweetheart, cutie<br>and soul of the company, always having<br>fun and not worrying about trifles';
+			}
+			stri += '<img id="cookie" align="center" src="cookies/'+img+'">';
+			stri += '<p align="center" style="font-family: BasicManual; color: rgba(255, 255, 255, 1); font-size: 20px;">'+message+'</p>';
+			l('cookie_here').innerHTML = stri;
+		}
+	</script>
+</body>
+</html>
