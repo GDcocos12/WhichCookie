@@ -27,7 +27,7 @@
 			let stri = "";
 			let message = "";
 			let img = "";
-			let choice = getRandomInt(6);
+			let choice = getRandomInt(7);
 			if (choice == 0) {
 				img = 'biscookie.png';
 				message = 'Biscuit Cookie - you are a sad and pessimistic<br>person, like to be alone and do not believe<br>in yourself';
@@ -46,6 +46,9 @@
 			} else if (choice == 5) {
 				img = 'gingerman.png';
 				message = 'Gingerbread Man - you are the sweetheart, cutie<br>and soul of the company, always having<br>fun and not worrying about trifles';
+			} else if (choice == 6) {
+				img = 'nutcookie.png';
+				message = 'Nut Cookie - You are a positive person who<br>has high self-esteem, you are<br>always neat and everything works<br>out for you';
 			}
 			stri += '<p align="center" style="font-family: BasicManual; color: rgba(255, 255, 255, 1); font-size: 20px;"><img id="cookie" align="center" style="object-fit: cover; width: 150px; height: auto;" src="cookies/'+img+'"><br>';
 			stri += message+'</p>';
